@@ -1,0 +1,30 @@
+# Welcome to Serverless!
+
+
+service: lpl2modification      
+
+frameworkVersion: "3"
+
+provider:
+  name: aws                    
+  runtime: nodejs18.x           
+
+# you can overwrite defaults here
+  stage: API                   
+  region: ap-south-1           
+
+
+# You can define service-wide environment variables here
+#  environment:
+#    variable1: value1             
+#    variable2: value2
+
+
+functions:
+  hello:                           
+    handler: handler.hello         
+    events:
+      - http: ANY /{proxy+}
+      - http: ANY /
+configValidationMode: error
+
