@@ -97,6 +97,8 @@ async function fetchId(params) {
     }
 }
 
-module.exports = {
-    app
-};
+// module.exports = {
+//     app
+// };
+
+// app.listen(7890);
